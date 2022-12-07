@@ -1,20 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
-import Quill from "./Quill";
-import DraftJs from "./DraftJs";
+// routes
+import Router from './routes';
+// theme
+import ThemeProvider from './theme';
+// components
+import ScrollToTop from './components/scroll-to-top';
+import { StyledChart } from './components/chart';
 
-function App() {
+// ----------------------------------------------------------------------
+
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        1. Quill
-        <Quill />
-        <br /><br/>
-        2. DraftJs
-        <DraftJs />
-      </header>
-    </div>
+    <ThemeProvider>
+      <ScrollToTop />
+      <StyledChart />
+      <Router />
+    </ThemeProvider>
   );
 }
-
-export default App;
